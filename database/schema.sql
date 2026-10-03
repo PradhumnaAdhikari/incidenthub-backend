@@ -1,0 +1,10 @@
+CREATE TABLE IF NOT EXISTS incidents (
+    id SERIAL PRIMARY KEY,
+    title VARCHAR(255) NOT NULL,
+    description TEXT NOT NULL,
+    severity VARCHAR(20) NOT NULL DEFAULT 'medium',
+    status VARCHAR(30) NOT NULL DEFAULT 'open',
+    service VARCHAR(100) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
